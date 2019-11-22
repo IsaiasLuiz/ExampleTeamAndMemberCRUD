@@ -1,0 +1,82 @@
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: brown;
+	min-height: 100px;
+	border-bottom: 1px solid brown;
+}
+
+.team-registration {
+	margin-top: 10px;
+	border: 1px solid red;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 1.3em;
+	color: crimson;
+}
+
+.team-registration input[type='text'] {
+	width: 300px;
+	padding: 2px;
+	font-size: 0.9em;
+}
+
+.team-registration .register-teams {
+	width: 150px;
+	height: 35px;
+	background: indianred;
+	color: white;
+	cursor: pointer;
+	border: none;
+	font-size: 0.8em;
+	position: absolute;
+	border-radius: 10px;
+	margin-left: 20px;
+}
+
+.registered-teams {
+	cursor: pointer;
+	width: 250px;
+	height: 40px;
+	margin-left: 250px;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	background: tomato;
+	font-size: 0.8em;
+}
+
+.teams-list {
+	border: 1px solid red;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.team {
+	border: 1px solid tomato;
+	width: 400px;
+	margin: 10px;
+	padding: 10px;
+	height: 200px;
+	overflow-y: scroll;
+}
+
+.team h3 {
+	display: inline;
+}
+
+.team button {
+	background: darksalmon;
+	border-color: darksalmon;
+	border-radius: 5px;
+	margin-left: 10px;
+	color: #fff;
+}
+
+.add-member {
+	width: 200px;
+	margin-left: 10px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>Membros e Times</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1>Faça aqui o registro de Times</h1>
+		</header>
+		<div class="team-registration">
+			<label for="team"
+				>Digite o nome do Time:
+				<input type="text" name="" id="team" required minLength="1" />
+			</label>
+			<button class="register-teams" onclick="register()">Registrar</button>
+			<button class="registered-teams" onclick="viewRegisteredTeams()">
+				Ver Times Registrados
+			</button>
+		</div>
+		<script src="./index.js"></script>
+		<script src="./service.js"></script>
+	</body>
+</html>
