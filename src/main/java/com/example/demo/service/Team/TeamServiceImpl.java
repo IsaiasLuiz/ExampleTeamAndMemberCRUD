@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.example.demo.unitary.domain.model.Team;
-import com.example.demo.unitary.domain.request.TeamRequest;
-import com.example.demo.unitary.domain.response.TeamResponse;
+import com.example.demo.domain.model.Team;
+import com.example.demo.domain.request.TeamRequest;
+import com.example.demo.domain.response.TeamResponse;
 import com.example.demo.repository.TeamRepository;
 import com.example.demo.service.ServiceDefault;
 import org.springframework.beans.factory.annotation.Autowired;

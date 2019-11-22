@@ -2,10 +2,11 @@ package com.example.demo.controler;
 
 import java.util.List;
 
-import com.example.demo.unitary.domain.exception.TeamNotFoundException;
-import com.example.demo.unitary.domain.request.MemberRequest;
-import com.example.demo.unitary.domain.request.MemberRequestUpdate;
-import com.example.demo.unitary.domain.response.MemberResponse;
+import com.example.demo.domain.exception.MemberNotFoundException;
+import com.example.demo.domain.exception.TeamNotFoundException;
+import com.example.demo.domain.request.MemberRequest;
+import com.example.demo.domain.request.MemberRequestUpdate;
+import com.example.demo.domain.response.MemberResponse;
 import com.example.demo.service.Member.MemberServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -49,7 +50,7 @@ public class MemberController {
     }
 
     @PutMapping
-    public void update(@RequestBody final MemberRequestUpdate memberRequest) throws TeamNotFoundException {
+    public void update(@RequestBody final MemberRequestUpdate memberRequest) throws TeamNotFoundException, MemberNotFoundException {
         memberService.update(memberRequest);
     }
 

@@ -1,4 +1,4 @@
-package com.example.demo.unitary.domain;
+package com.example.demo.domain;
 
 public interface MapperConverter<T, R> {
 

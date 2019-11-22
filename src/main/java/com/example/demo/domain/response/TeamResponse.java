@@ -1,11 +1,11 @@
-package com.example.demo.unitary.domain.response;
+package com.example.demo.domain.response;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import com.example.demo.unitary.domain.MapperConverter;
-import com.example.demo.unitary.domain.model.Member;
-import com.example.demo.unitary.domain.model.Team;
+import com.example.demo.domain.MapperConverter;
+import com.example.demo.domain.model.Member;
+import com.example.demo.domain.model.Team;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import com.example.demo.unitary.domain.exception.TeamNotFoundException;
+import com.example.demo.domain.exception.TeamNotFoundException;
 
 public interface ServiceDefault<T, R> {
 

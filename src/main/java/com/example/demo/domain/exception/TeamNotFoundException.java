@@ -1,4 +1,4 @@
-package com.example.demo.unitary.domain.exception;
+package com.example.demo.domain.exception;
 
 import lombok.Getter;
 

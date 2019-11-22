@@ -4,15 +4,16 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.example.demo.unitary.domain.exception.TeamNotFoundException;
-import com.example.demo.unitary.domain.model.Member;
-import com.example.demo.unitary.domain.model.Team;
-import com.example.demo.unitary.domain.request.MemberRequest;
-import com.example.demo.unitary.domain.request.MemberRequestUpdate;
-import com.example.demo.unitary.domain.response.MemberResponse;
 import com.example.demo.repository.MemberRepository;
 import com.example.demo.repository.TeamRepository;
 import com.example.demo.service.ServiceDefault;
+import com.example.demo.domain.exception.MemberNotFoundException;
+import com.example.demo.domain.exception.TeamNotFoundException;
+import com.example.demo.domain.model.Member;
+import com.example.demo.domain.model.Team;
+import com.example.demo.domain.request.MemberRequest;
+import com.example.demo.domain.request.MemberRequestUpdate;
+import com.example.demo.domain.response.MemberResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -62,7 +63,11 @@ public class MemberServiceImpl implements ServiceDefault<MemberRequest, MemberRe
         memberRepository.deleteById(id);
     }
 
-    public void update(final MemberRequestUpdate requestUpdate) throws TeamNotFoundException {
+    public void update(final MemberRequestUpdate requestUpdate) throws TeamNotFoundException, MemberNotFoundException {
+        if (!teamRepository.findById(requestUpdate.getId()).isPresent()) {
+            throw new MemberNotFoundException(requestUpdate.getId());
+        }
+
         final Team team = checkTeamExists(requestUpdate.getIdTeam());
 
         Member member = Member.builder()

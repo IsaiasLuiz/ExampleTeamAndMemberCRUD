@@ -1,9 +1,9 @@
-package com.example.demo.unitary.domain.response;
+package com.example.demo.domain.response;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import com.example.demo.unitary.domain.model.Member;
+import com.example.demo.domain.model.Member;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;

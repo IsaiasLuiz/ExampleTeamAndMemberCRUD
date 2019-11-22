@@ -2,8 +2,8 @@ package com.example.demo.controler;
 
 import java.util.List;
 
-import com.example.demo.unitary.domain.request.TeamRequest;
-import com.example.demo.unitary.domain.response.TeamResponse;
+import com.example.demo.domain.request.TeamRequest;
+import com.example.demo.domain.response.TeamResponse;
 import com.example.demo.service.Team.TeamServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,6 +29,7 @@ public class TeamController {
         teamService.save(team);
     }
 
+    @ResponseStatus(code = HttpStatus.OK)
     @ResponseBody
     @GetMapping
     public List<TeamResponse> listAll(@RequestParam final Integer page) {

@@ -1,4 +1,4 @@
-package com.example.demo.unitary.domain.request;
+package com.example.demo.domain.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
